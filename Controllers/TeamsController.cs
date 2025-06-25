@@ -22,6 +22,7 @@ public class TeamsController : ControllerBase
         _teamRepo = teamRepo;
     }
 
+    //[Authorize(Roles = "TeamAdmin")]
     [HttpPost]
     public async Task<IActionResult> CreateTeam(CreateTeamRequest request)
     {

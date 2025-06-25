@@ -8,7 +8,7 @@ namespace TaskManagementAPI.Models
         public Guid UserId { get; set; }
 
         [Required]
-        [RegularExpression("Admin|Member", ErrorMessage = "Role must be either 'Admin' or 'Member'")]
+        [RegularExpression("TeamAdmin|Member", ErrorMessage = "Role must be either 'TeamAdmin' or 'Member'")]
         public string Role { get; set; }
     }
 

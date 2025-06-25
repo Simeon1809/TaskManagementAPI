@@ -29,7 +29,7 @@ public class TeamService : ITeamService
         {
             TeamId = team.Id,
             UserId = creatorUserId,
-            Role = "Admin"
+            Role = "TeamAdmin"
         });
 
 
