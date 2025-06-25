@@ -1,11 +1,10 @@
 ﻿using Moq;
-using Org.BouncyCastle.Utilities;
 using System.Security.Cryptography;
 using System.Text;
 using TaskManagementAPI.IRepository;
 using TaskManagementAPI.Models;
+using TaskManagementAPI.Models.DTO;
 using TaskManagementAPI.Services;
-using TaskManagementAPI.Services.DTO;
 using Xunit;
 
 namespace TaskManagementAPI.UnitTest

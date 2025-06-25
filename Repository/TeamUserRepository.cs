@@ -13,6 +13,7 @@ namespace TaskManagementAPI.Repository
 
         public async System.Threading.Tasks.Task AddAsync(TeamUser teamUser)
         {
+
             _db.TeamUsers.Add(teamUser);
             await _db.SaveChangesAsync();
         }
@@ -30,6 +31,13 @@ namespace TaskManagementAPI.Repository
                 .Select(tu => tu.Role)
                 .FirstOrDefaultAsync();
         }
+
+        public async Task<bool> ExistsByNameAsync(string name)
+        {
+            return await _db.Teams
+                .AnyAsync(t => t.Name.Trim().ToLower() == name.Trim().ToLower());
+        }
+
     }
 
 }

@@ -11,13 +11,15 @@ using TaskManagementAPI.Services;
 [Route("teams")]
 public class TeamsController : ControllerBase
 {
-    private readonly ITeamService _teamService;
+    private readonly ITeamService _teamService; 
+    private readonly ITeamUserRepository _teamRepo;
     private ILogger<TeamService> _logger;
 
-    public TeamsController(ITeamService teamService, ILogger<TeamService> logger)
+    public TeamsController(ITeamService teamService, ILogger<TeamService> logger, ITeamUserRepository teamRepo)
     {
         _teamService = teamService;
         _logger = logger;
+        _teamRepo = teamRepo;
     }
 
     [HttpPost]
@@ -31,6 +33,10 @@ public class TeamsController : ControllerBase
             _logger.LogWarning("CreateTeam called with missing or invalid user ID claim.");
             return Unauthorized(new { message = "Invalid or missing user identity." });
         }
+
+        var existingTeams = await _teamRepo.ExistsByNameAsync(request.Name);
+        if (existingTeams)
+            throw new ApplicationException($"You already have a team named '{request.Name}'.");
 
         _logger.LogInformation("POST /teams requested by user {UserId}", userId);
 

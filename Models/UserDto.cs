@@ -12,7 +12,7 @@ public class UserDto
     {
         Id = user.Id;
         Email = user.Email;
-        Role ="Admin";
+        Role ="Member";
     }
 }
 

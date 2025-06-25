@@ -252,3 +252,4 @@ C:\Users\asimeon\Desktop\TeamTaskManagementAPI\TaskManagementAPI\obj\Debug\net8.
 C:\Users\asimeon\Desktop\TeamTaskManagementAPI\TaskManagementAPI\obj\Debug\net8.0\TaskManagementAPI.pdb
 C:\Users\asimeon\Desktop\TeamTaskManagementAPI\TaskManagementAPI\obj\Debug\net8.0\TaskManagementAPI.genruntimeconfig.cache
 C:\Users\asimeon\Desktop\TeamTaskManagementAPI\TaskManagementAPI\obj\Debug\net8.0\ref\TaskManagementAPI.dll
+C:\Users\asimeon\Desktop\TeamTaskManagementAPI\TaskManagementAPI\obj\Debug\net8.0\TaskManagementAPI.sourcelink.json

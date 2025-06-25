@@ -1,19 +1,15 @@
 ﻿using TaskManagementAPI.Models;
 
-namespace TaskManagementAPI.Services.DTO
+namespace TaskManagementAPI.Models.DTO
 {
-    public class RegisterRequest
-    {
-        public string Email { get; set; }
-        public string Password { get; set; }
-    }
+
 
     public class LoginRequest
     {
         public string Email { get; set; }
         public string Password { get; set; }
-    }  
- 
+    }
+
 
     public class AuthResponse
     {

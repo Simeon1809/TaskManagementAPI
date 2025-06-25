@@ -2,7 +2,7 @@
 using System.Text;
 using TaskManagementAPI.IRepository;
 using TaskManagementAPI.Models;
-using TaskManagementAPI.Services.DTO;
+using TaskManagementAPI.Models.DTO;
 
 namespace TaskManagementAPI.Services
 {
