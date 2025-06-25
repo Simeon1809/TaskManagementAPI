@@ -22,6 +22,12 @@ A secure RESTful API for team-based task collaboration, built with **C#/.NET 8**
 
 ## 🗂️ EF Core Migrations (Code-First)
 
+### ⚙️ Running the API
+
+1. **Clone the repository**  
+   ```bash
+   git clone https://github.com/Simeon1809/TaskManagementAPI.git
+
 Use the following steps to configure and create your database schema using **EF Core 8**.
 
 ### 1. Configure Your Connection
