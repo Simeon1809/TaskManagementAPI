@@ -3,6 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using System.Text;
+using TaskManagementAPI;
 using TaskManagementAPI.IRepository;
 using TaskManagementAPI.Repository;
 using TaskManagementAPI.Services;
@@ -24,6 +25,13 @@ builder.Services.AddScoped<IUserService, UserService>();
 builder.Services.AddScoped<ITeamService, TeamService>();
 builder.Services.AddScoped<ITaskService, TaskService>();
 builder.Services.AddScoped<IJwtService, JwtService>();
+
+builder.Logging.ClearProviders();
+builder.Logging.AddConsole(); // optional, for dual logging
+builder.Logging.AddProvider(new DatabaseLoggerProvider(
+    builder.Services.BuildServiceProvider().GetRequiredService<IServiceScopeFactory>()
+));
+
 
 // Register repositories
 builder.Services.AddScoped<IUserRepository, UserRepository>();

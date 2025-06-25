@@ -43,7 +43,7 @@ public class TeamService : ITeamService
             throw new UnauthorizedAccessException("Only team members can add users.");
 
         var callerRole = await _teamUserRepo.GetUserRoleInTeamAsync(performedByUserId, teamId);
-        if (callerRole != "Admin")
+        if (callerRole != "TeamAdmin")
             throw new UnauthorizedAccessException("Only team admins can add users.");
 
         var isTargetInTeam = await _teamUserRepo.IsUserInTeamAsync(targetUserId, teamId);

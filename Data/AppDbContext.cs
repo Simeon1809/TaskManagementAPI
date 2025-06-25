@@ -12,6 +12,8 @@ public class AppDbContext : DbContext
     public DbSet<Team> Teams { get; set; }
     public DbSet<TeamUser> TeamUsers { get; set; }
     public DbSet<TaskManagementAPI.Models.Task> Tasks { get; set; }
+    public DbSet<LogEntry> Logs { get; set; }
+
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {

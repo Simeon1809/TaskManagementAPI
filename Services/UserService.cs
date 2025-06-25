@@ -8,7 +8,7 @@ namespace TaskManagementAPI.Services
 {
     public class UserService : IUserService
     {
-        private readonly IUserRepository _userRepo;
+        private readonly IUserRepository _userRepo; 
         private readonly IJwtService _jwtService;
 
         public UserService(IUserRepository userRepo, IJwtService jwtService)
@@ -48,16 +48,14 @@ namespace TaskManagementAPI.Services
             var valid = VerifyPassword(request.Password, user.PasswordHash, user.PasswordSalt);
             if (!valid)
                 throw new UnauthorizedAccessException("Invalid credentials.");
-
             var token = _jwtService.GenerateToken(user);
 
             return new AuthResponse
             {
                 Email = user.Email,
-                Token = token
+                Token = token,
             };
         }
-
 
         public async Task<UserDto> GetCurrentUserAsync(Guid userId)
         {

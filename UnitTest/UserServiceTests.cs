@@ -53,7 +53,7 @@ namespace TaskManagementAPI.UnitTest
             var result = await _userService.LoginAsync(new LoginRequest { Email = user.Email, Password = password });
 
             Assert.Equal(token, result.Token);
-            Assert.Equal(user.Email, result.Email);
+            Assert.Equal(user.Email, result.Email); 
         }
     }
 

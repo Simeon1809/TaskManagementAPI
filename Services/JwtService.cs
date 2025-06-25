@@ -1,15 +1,18 @@
-﻿using Microsoft.IdentityModel.Tokens;
+﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
 using TaskManagementAPI.IRepository;
 using TaskManagementAPI.Models;
+using TeamTaskManagementAPI.Data;
 
 namespace TaskManagementAPI.Services
 {
     public class JwtService : IJwtService
     {
         private readonly IConfiguration _config;
+        private readonly AppDbContext _context;
 
         public JwtService(IConfiguration config)
         {
@@ -33,7 +36,6 @@ namespace TaskManagementAPI.Services
                 signingCredentials: new SigningCredentials(
                     new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256)
             );
-
             return new JwtSecurityTokenHandler().WriteToken(token);
         }
     }

@@ -1,3 +1,11 @@
+C:\Users\asimeon\Desktop\TeamTaskManagementAPI\TaskManagementAPI\obj\Debug\net8.0\TaskManagementAPI.csproj.AssemblyReference.cache
+C:\Users\asimeon\Desktop\TeamTaskManagementAPI\TaskManagementAPI\obj\Debug\net8.0\TaskManagementAPI.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\asimeon\Desktop\TeamTaskManagementAPI\TaskManagementAPI\obj\Debug\net8.0\TaskManagementAPI.AssemblyInfoInputs.cache
+C:\Users\asimeon\Desktop\TeamTaskManagementAPI\TaskManagementAPI\obj\Debug\net8.0\TaskManagementAPI.AssemblyInfo.cs
+C:\Users\asimeon\Desktop\TeamTaskManagementAPI\TaskManagementAPI\obj\Debug\net8.0\TaskManagementAPI.csproj.CoreCompileInputs.cache
+C:\Users\asimeon\Desktop\TeamTaskManagementAPI\TaskManagementAPI\obj\Debug\net8.0\TaskManagementAPI.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\asimeon\Desktop\TeamTaskManagementAPI\TaskManagementAPI\obj\Debug\net8.0\TaskManagementAPI.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\asimeon\Desktop\TeamTaskManagementAPI\TaskManagementAPI\obj\Debug\net8.0\TaskManagementAPI.sourcelink.json
 C:\Users\asimeon\Desktop\TeamTaskManagementAPI\TaskManagementAPI\bin\Debug\net8.0\testhost.dll
 C:\Users\asimeon\Desktop\TeamTaskManagementAPI\TaskManagementAPI\bin\Debug\net8.0\xunit.abstractions.dll
 C:\Users\asimeon\Desktop\TeamTaskManagementAPI\TaskManagementAPI\bin\Debug\net8.0\testhost.exe
@@ -231,13 +239,6 @@ C:\Users\asimeon\Desktop\TeamTaskManagementAPI\TaskManagementAPI\bin\Debug\net8.
 C:\Users\asimeon\Desktop\TeamTaskManagementAPI\TaskManagementAPI\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
 C:\Users\asimeon\Desktop\TeamTaskManagementAPI\TaskManagementAPI\bin\Debug\net8.0\runtimes\browser\lib\net8.0\System.Text.Encodings.Web.dll
 C:\Users\asimeon\Desktop\TeamTaskManagementAPI\TaskManagementAPI\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
-C:\Users\asimeon\Desktop\TeamTaskManagementAPI\TaskManagementAPI\obj\Debug\net8.0\TaskManagementAPI.csproj.AssemblyReference.cache
-C:\Users\asimeon\Desktop\TeamTaskManagementAPI\TaskManagementAPI\obj\Debug\net8.0\TaskManagementAPI.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\asimeon\Desktop\TeamTaskManagementAPI\TaskManagementAPI\obj\Debug\net8.0\TaskManagementAPI.AssemblyInfoInputs.cache
-C:\Users\asimeon\Desktop\TeamTaskManagementAPI\TaskManagementAPI\obj\Debug\net8.0\TaskManagementAPI.AssemblyInfo.cs
-C:\Users\asimeon\Desktop\TeamTaskManagementAPI\TaskManagementAPI\obj\Debug\net8.0\TaskManagementAPI.csproj.CoreCompileInputs.cache
-C:\Users\asimeon\Desktop\TeamTaskManagementAPI\TaskManagementAPI\obj\Debug\net8.0\TaskManagementAPI.MvcApplicationPartsAssemblyInfo.cs
-C:\Users\asimeon\Desktop\TeamTaskManagementAPI\TaskManagementAPI\obj\Debug\net8.0\TaskManagementAPI.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\asimeon\Desktop\TeamTaskManagementAPI\TaskManagementAPI\obj\Debug\net8.0\staticwebassets.build.json
 C:\Users\asimeon\Desktop\TeamTaskManagementAPI\TaskManagementAPI\obj\Debug\net8.0\staticwebassets.development.json
 C:\Users\asimeon\Desktop\TeamTaskManagementAPI\TaskManagementAPI\obj\Debug\net8.0\staticwebassets\msbuild.TaskManagementAPI.Microsoft.AspNetCore.StaticWebAssets.props
@@ -252,4 +253,3 @@ C:\Users\asimeon\Desktop\TeamTaskManagementAPI\TaskManagementAPI\obj\Debug\net8.
 C:\Users\asimeon\Desktop\TeamTaskManagementAPI\TaskManagementAPI\obj\Debug\net8.0\TaskManagementAPI.pdb
 C:\Users\asimeon\Desktop\TeamTaskManagementAPI\TaskManagementAPI\obj\Debug\net8.0\TaskManagementAPI.genruntimeconfig.cache
 C:\Users\asimeon\Desktop\TeamTaskManagementAPI\TaskManagementAPI\obj\Debug\net8.0\ref\TaskManagementAPI.dll
-C:\Users\asimeon\Desktop\TeamTaskManagementAPI\TaskManagementAPI\obj\Debug\net8.0\TaskManagementAPI.sourcelink.json

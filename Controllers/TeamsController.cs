@@ -22,7 +22,6 @@ public class TeamsController : ControllerBase
         _teamRepo = teamRepo;
     }
 
-    //[Authorize(Roles = "TeamAdmin")]
     [HttpPost]
     public async Task<IActionResult> CreateTeam(CreateTeamRequest request)
     {
@@ -45,14 +44,27 @@ public class TeamsController : ControllerBase
         return Ok(team);
     }
 
-
+    [Authorize]
     [HttpPost("{teamId}/users")]
     public async Task<IActionResult> AddUserToTeam(Guid teamId, [FromBody] AddUserToTeamRequest request)
     {
         var currentUserId = GetUserId();
+
+        var currentUserRole = await _teamRepo.GetUserRoleInTeamAsync(currentUserId, teamId);
+
+        if (currentUserRole != "TeamAdmin")
+        {
+            _logger.LogWarning("User {UserId} attempted to add a user to team {TeamId} without Admin role.", currentUserId, teamId);
+            return Forbid("Only Admins can add users to a team.");
+        }
+
         await _teamService.AddUserToTeamAsync(teamId, request.UserId, request.Role, currentUserId);
+
+        _logger.LogInformation("User {UserId} added user {AddedUserId} to team {TeamId} as {Role}", currentUserId, request.UserId, teamId, request.Role);
+
         return NoContent();
     }
+
 
 
     [HttpGet]
