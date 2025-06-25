@@ -1,28 +1,98 @@
-﻿# Team Task Management API
+﻿# 🧠 Team Task Management API
 
-A secure RESTful API for team-based task management built with C#/.NET Core, SQL Server, and EF Core.
+A secure RESTful API for team-based task collaboration, built with **C#/.NET 8**, **Entity Framework Core**, and **SQL Server**. It allows users to register, join teams, and manage tasks within their teams — all securely authenticated using JWT.
 
-## Tech Stack
-- **Framework**: .NET 8
-- **Database**: SQL Server with EF Core (code-first migrations)
-- **Authentication**: JWT
-- **Dependencies**: 
-  - Microsoft.EntityFrameworkCore.SqlServer
-  - Microsoft.AspNetCore.Authentication.JwtBearer
-  - BCrypt.Net-Next (for password hashing)
+---
 
-## EF Core Migrations (Code-First)
+## ⚙️ Tech Stack
 
-To apply or update database schema using EF Core 8:
+- **Framework**: .NET 8 (ASP.NET Core Web API)
+- **Database**: SQL Server with Entity Framework Core (Code-First)
+- **Authentication**: JWT Bearer Tokens
+- **Password Hashing**: BCrypt.Net-Next
 
-### 1. To Create the Database and corresponding tables in you MSSQL, The following should be done
+### 🔌 NuGet Dependencies
 
-1. Go to the Appsettings.json file and change the Server name to your server
+- `Microsoft.EntityFrameworkCore.SqlServer`
+- `Microsoft.AspNetCore.Authentication.JwtBearer`
+- `Microsoft.EntityFrameworkCore.Tools`
+- `BCrypt.Net-Next`
+
+---
+
+## 🗂️ EF Core Migrations (Code-First)
+
+Use the following steps to configure and create your database schema using **EF Core 8**.
+
+### 1. Configure Your Connection
+
+Open the `appsettings.json` file and update the connection string to match your SQL Server:
+
+```json
+"ConnectionStrings": {
+  "DefaultConnection": "Server=YOUR_SERVER_NAME;Database=TeamTaskDb;Trusted_Connection=True;TrustServerCertificate=True;"
+}
 
 
-2. go to Package manager console and run the following query 
+ go to Package manager console and run the following query 
 
     1. dotnet ef migrations add InitialCreate
  
     2. dotnet ef database update
+
+
+
+
+ API Assumptions
+
+
+  Authentication & Authorization
+All endpoints require JWT authentication via Authorization: Bearer <token>.
+
+JWT tokens include a NameIdentifier claim used as the user’s unique identifier.
+
+[Authorize] is applied to secure routes, and user authorization is verified in services where necessary.
+
+👤 Users
+Users register with a valid, unique email and password.
+
+Passwords are stored securely using salted hashing (e.g., HMACSHA512 or BCrypt).
+
+The system returns a token and basic profile data upon successful login or registration.
+
+Password hashes and other sensitive fields are never returned to clients.
+
+👥 Teams
+Users can create and belong to multiple teams.
+
+The user who creates a team becomes its Admin.
+
+Admins can invite other users and assign them roles (Admin, Member).
+
+Team names must be unique per user.
+
+Teams cannot be deleted (in current implementation).
+
+📋 Tasks
+Tasks belong to teams and must be assigned to a user who is a member of that team.
+
+Only team members can view tasks for that team.
+
+Only Admins or task creators can update or delete tasks.
+
+Task statuses include: Pending, InProgress, and Completed.
+
+Each task must include a title, due date, assignee, and team.
+
+⚙️ Infrastructure & Behavior
+SQL Server is used with EF Core's Code-First approach.
+
+All entities use Guid as their primary keys.
+
+
+A global exception-handling middleware ensures uniform error responses in JSON format.
+
+Swagger UI is available at /swagger for testing and documentation.
+
+Unit tests are written using xUnit and Moq for service-level testing.
 
